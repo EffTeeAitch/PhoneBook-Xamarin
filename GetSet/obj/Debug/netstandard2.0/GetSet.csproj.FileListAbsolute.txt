@@ -1,0 +1,14 @@
+D:\notatnki\C#\Listy\GetSet\GetSet\bin\Debug\netstandard2.0\GetSet.deps.json
+D:\notatnki\C#\Listy\GetSet\GetSet\bin\Debug\netstandard2.0\GetSet.dll
+D:\notatnki\C#\Listy\GetSet\GetSet\bin\Debug\netstandard2.0\ref\GetSet.dll
+D:\notatnki\C#\Listy\GetSet\GetSet\bin\Debug\netstandard2.0\GetSet.pdb
+D:\notatnki\C#\Listy\GetSet\GetSet\obj\Debug\netstandard2.0\GetSet.csprojAssemblyReference.cache
+D:\notatnki\C#\Listy\GetSet\GetSet\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\notatnki\C#\Listy\GetSet\GetSet\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\notatnki\C#\Listy\GetSet\GetSet\obj\Debug\netstandard2.0\GetSet.AssemblyInfoInputs.cache
+D:\notatnki\C#\Listy\GetSet\GetSet\obj\Debug\netstandard2.0\GetSet.AssemblyInfo.cs
+D:\notatnki\C#\Listy\GetSet\GetSet\obj\Debug\netstandard2.0\GetSet.csproj.CoreCompileInputs.cache
+D:\notatnki\C#\Listy\GetSet\GetSet\obj\Debug\netstandard2.0\XamlC.stamp
+D:\notatnki\C#\Listy\GetSet\GetSet\obj\Debug\netstandard2.0\GetSet.dll
+D:\notatnki\C#\Listy\GetSet\GetSet\obj\Debug\netstandard2.0\ref\GetSet.dll
+D:\notatnki\C#\Listy\GetSet\GetSet\obj\Debug\netstandard2.0\GetSet.pdb
