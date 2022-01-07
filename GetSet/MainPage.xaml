@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GetSet.MainPage">
+
+    <StackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Label 
+                Text="CO WYSWIETLIC"
+                FontSize="Large"
+                Grid.ColumnSpan="3"
+                Grid.Column="0"
+                Grid.Row="0"
+                BackgroundColor="SlateGray"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                />
+            <Button 
+                Text="Nazwa"
+                Grid.Row="1"
+                Grid.Column="0"
+                Clicked="Nazwa"
+                />
+            <Button 
+                Text="Numer"
+                Grid.Row="1"
+                Grid.Column="1"
+                Clicked="Numer"
+                />
+            <Button 
+                Text="E-mail"
+                Grid.Row="1"
+                Grid.Column="2"
+                Clicked="Mail"
+                />
+        </Grid>
+        <ListView x:Name="lista">
+            
+        </ListView>
+
+        <Entry x:Name="name" 
+            Placeholder="Podaj nazwe" 
+            Text=""
+            PlaceholderColor="Black"
+            BackgroundColor="Yellow"
+            TextColor="Black"
+            FontAttributes="Italic"
+            
+            />
+
+        <Entry x:Name="phone"
+               Placeholder="Podaj numer"
+               Text=""
+               Keyboard="Telephone"
+               PlaceholderColor="Black"
+               BackgroundColor="Yellow"
+               TextColor="Black"
+               FontAttributes="Italic"
+               
+               />
+        
+        <Entry x:Name="mail"
+               Placeholder="Podaj email" 
+               Text=""
+               PlaceholderColor="Black"
+               BackgroundColor="Yellow"
+               TextColor="Black"
+               FontAttributes="Italic"
+               />
+        <Button
+            Text="Dodaj wpis"
+            FontSize="Large"
+            Clicked="Dodaj"
+            BackgroundColor="Blue"
+            TextColor="White"
+            />
+
+        <Button x:Name="przeslij"
+            Text="Pokaz wpisy: nazwa"
+            FontSize="Large"
+            Clicked="Pokaz"
+            BackgroundColor="Blue"
+            TextColor="White"
+            />
+    </StackLayout>
+
+</ContentPage>
