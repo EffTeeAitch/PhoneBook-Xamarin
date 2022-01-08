@@ -11,7 +11,7 @@ namespace GetSet
 {
     public partial class MainPage : ContentPage
     {
-        string whatToPick = "nazwa";
+        string whatToPick = "name";
         class Contact
         {
             public string name { get; set; }
@@ -64,7 +64,7 @@ namespace GetSet
             List<string> added = new List<string>();
             if (contacts[contacts.Count - 1].name == "" && contacts[contacts.Count - 1].number == "" && contacts[contacts.Count - 1].email == "")
             {
-                added.Add("Nie mozna dodac pustego wpisu");
+                added.Add("You can not insert empty record");
                 string[] show = new string[added.Count];
                 for (int i = 0; i < added.Count; i++)
                 {
@@ -75,10 +75,10 @@ namespace GetSet
             }
             else
             {
-                added.Add("Dodano:");
-                added.Add($"Imie: {nameUser}");
-                added.Add($"Telefon: {phoneNumber}");
-                added.Add($"E-mail: {adress}");
+                added.Add("Added:");
+                added.Add($"Name: {nameUser}");
+                added.Add($"Phone number: {phoneNumber}");
+                added.Add($"E-mail adress: {adress}");
 
                 string[] show = new string[added.Count];
                 for (int i = 0; i < added.Count; i++)
@@ -92,18 +92,18 @@ namespace GetSet
             
         private void Name(object sender, EventArgs e)
         {
-            whatToPick = "nazwa";
-            send.Text = "POKAZ WPISY: nazwa";
+            whatToPick = "name";
+            send.Text = "DISPLAY RECORDS: name";
         }
         private void Number(object sender, EventArgs e) 
         { 
-            whatToPick = "numer";
-            send.Text = "POKAZ WPISY: numer";
+            whatToPick = "number";
+            send.Text = "DISPLAY RECORDS: number";
         }
         private void Mail(object sender, EventArgs e)
         {
-            whatToPick = "mail";
-            send.Text = "POKAZ WPISY: e-mail";
+            whatToPick = "email";
+            send.Text = "DISPLAY RECORDS: e-mail";
         }
     }
 }
