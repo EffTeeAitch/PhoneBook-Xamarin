@@ -11,99 +11,99 @@ namespace GetSet
 {
     public partial class MainPage : ContentPage
     {
-        string coWybrac = "nazwa";
-        class Kontakt
+        string whatToPick = "nazwa";
+        class Contact
         {
-            public string nazwa { get; set; }
-            public string numer { get; set; }
+            public string name { get; set; }
+            public string number { get; set; }
             public string email { get; set; }
 
-            public Kontakt(string _nazwa, string numer, string _email)
+            public Contact(string _name, string _number, string _email)
             {
-                nazwa = _nazwa;
-                this.numer = numer;
+                name = _name;
+                number = _number;
                 email = _email;
             }
         }
         public MainPage()
         {
             InitializeComponent();
-            kontakty.Add(new Kontakt("Szybki Tomek", "123456789","szybki.tomek@dbd.com"));
-            kontakty.Add(new Kontakt("Wolny Maciek", "987654321", "wolny.maciek@valorant.eu"));
-            kontakty.Add(new Kontakt("Klopoty", "997", "klopoty.niedzwon@nigdy.pl"));
+            contacts.Add(new Contact("Szybki Tomek", "123456789","szybki.tomek@dbd.com"));
+            contacts.Add(new Contact("Wolny Maciek", "987654321", "wolny.maciek@valorant.eu"));
+            contacts.Add(new Contact("Klopoty", "997", "klopoty.niedzwon@nigdy.pl"));
         }
-        List<Kontakt> kontakty = new List<Kontakt>();
-        private void Pokaz(object sender, EventArgs e)
+        List<Contact> contacts = new List<Contact>();
+        private void Show(object sender, EventArgs e)
         {
-            string[] wpisy = new string[kontakty.Count];
-            for(int i = 0; i < kontakty.Count; i++)
+            string[] data = new string[contacts.Count];
+            for(int i = 0; i < contacts.Count; i++)
             {
-                if(coWybrac=="nazwa")
-                    wpisy[i] = kontakty[i].nazwa;
-                else if(coWybrac == "numer")
-                    wpisy[i] = kontakty[i].numer;
-                else if(coWybrac == "mail")
-                    wpisy[i] = kontakty[i].email;
+                if(whatToPick=="name")
+                    data[i] = contacts[i].name;
+                else if(whatToPick == "number")
+                    data[i] = contacts[i].number;
+                else if(whatToPick == "email")
+                    data[i] = contacts[i].email;
             }
-            lista.ItemsSource = wpisy;
+            list.ItemsSource = data;
         }
-        private void Dodaj(object sender, EventArgs e)
+        private void Add(object sender, EventArgs e)
         {
-            string imie = name.Text;
-            string telefon = phone.Text;
-            string adres = mail.Text;
+            string nameUser = name.Text;
+            string phoneNumber = phone.Text;
+            string adress = mail.Text;
             
-            void Czyszczenie()
+            void Clear()
             {
                 name.Text = "";
                 phone.Text = "";
                 mail.Text = "";
             }
 
-            kontakty.Add(new Kontakt(imie, telefon, adres));
-            List<string> dodano = new List<string>();
-            if (kontakty[kontakty.Count - 1].nazwa == "" && kontakty[kontakty.Count - 1].numer == "" && kontakty[kontakty.Count - 1].email == "")
+            contacts.Add(new Contact(nameUser, phoneNumber, adress));
+            List<string> added = new List<string>();
+            if (contacts[contacts.Count - 1].name == "" && contacts[contacts.Count - 1].number == "" && contacts[contacts.Count - 1].email == "")
             {
-                dodano.Add("Nie mozna dodac pustego wpisu");
-                string[] wyswietl = new string[dodano.Count];
-                for (int i = 0; i < dodano.Count; i++)
+                added.Add("Nie mozna dodac pustego wpisu");
+                string[] show = new string[added.Count];
+                for (int i = 0; i < added.Count; i++)
                 {
-                    wyswietl[i] = dodano[i];
+                    show[i] = added[i];
                 }
-                lista.ItemsSource = wyswietl;
-                kontakty.RemoveAt(kontakty.Count - 1);
+                list.ItemsSource = show;
+                contacts.RemoveAt(contacts.Count - 1);
             }
             else
             {
-                dodano.Add("Dodano:");
-                dodano.Add($"Imie: {imie}");
-                dodano.Add($"Telefon: {telefon}");
-                dodano.Add($"E-mail: {adres}");
+                added.Add("Dodano:");
+                added.Add($"Imie: {nameUser}");
+                added.Add($"Telefon: {phoneNumber}");
+                added.Add($"E-mail: {adress}");
 
-                string[] wyswietl = new string[dodano.Count];
-                for (int i = 0; i < dodano.Count; i++)
+                string[] show = new string[added.Count];
+                for (int i = 0; i < added.Count; i++)
                 {
-                    wyswietl[i] = dodano[i];
+                    show[i] = added[i];
                 }
-                lista.ItemsSource = wyswietl;
+                list.ItemsSource = show;
             }
-            Czyszczenie();
+            Clear();
         }
             
-        private void Nazwa(object sender, EventArgs e)
+        private void Name(object sender, EventArgs e)
         {
-            coWybrac = "nazwa";
-            przeslij.Text = "POKAZ WPISY: nazwa";
+            whatToPick = "nazwa";
+            send.Text = "POKAZ WPISY: nazwa";
         }
-        private void Numer(object sender, EventArgs e) 
+        private void Number(object sender, EventArgs e) 
         { 
-            coWybrac = "numer";
-            przeslij.Text = "POKAZ WPISY: numer";
+            whatToPick = "numer";
+            send.Text = "POKAZ WPISY: numer";
         }
         private void Mail(object sender, EventArgs e)
         {
-            coWybrac = "mail";
-            przeslij.Text = "POKAZ WPISY: e-mail";
+            whatToPick = "mail";
+            send.Text = "POKAZ WPISY: e-mail";
         }
     }
 }

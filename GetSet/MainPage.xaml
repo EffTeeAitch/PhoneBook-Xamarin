@@ -15,7 +15,7 @@
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <Label 
-                Text="CO WYSWIETLIC"
+                Text="What to display"
                 FontSize="Large"
                 Grid.ColumnSpan="3"
                 Grid.Column="0"
@@ -25,16 +25,16 @@
                 VerticalTextAlignment="Center"
                 />
             <Button 
-                Text="Nazwa"
+                Text="Name"
                 Grid.Row="1"
                 Grid.Column="0"
-                Clicked="Nazwa"
+                Clicked="Name"
                 />
             <Button 
-                Text="Numer"
+                Text="Number"
                 Grid.Row="1"
                 Grid.Column="1"
-                Clicked="Numer"
+                Clicked="Number"
                 />
             <Button 
                 Text="E-mail"
@@ -43,12 +43,12 @@
                 Clicked="Mail"
                 />
         </Grid>
-        <ListView x:Name="lista">
+        <ListView x:Name="list">
             
         </ListView>
 
         <Entry x:Name="name" 
-            Placeholder="Podaj nazwe" 
+            Placeholder="Insert name" 
             Text=""
             PlaceholderColor="Black"
             BackgroundColor="Yellow"
@@ -58,7 +58,7 @@
             />
 
         <Entry x:Name="phone"
-               Placeholder="Podaj numer"
+               Placeholder="Insert phone number"
                Text=""
                Keyboard="Telephone"
                PlaceholderColor="Black"
@@ -69,7 +69,7 @@
                />
         
         <Entry x:Name="mail"
-               Placeholder="Podaj email" 
+               Placeholder="insert email adress" 
                Text=""
                PlaceholderColor="Black"
                BackgroundColor="Yellow"
@@ -77,17 +77,17 @@
                FontAttributes="Italic"
                />
         <Button
-            Text="Dodaj wpis"
+            Text="Insert label"
             FontSize="Large"
-            Clicked="Dodaj"
+            Clicked="Add"
             BackgroundColor="Blue"
             TextColor="White"
             />
 
-        <Button x:Name="przeslij"
-            Text="Pokaz wpisy: nazwa"
+        <Button x:Name="send"
+            Text="Show records: name"
             FontSize="Large"
-            Clicked="Pokaz"
+            Clicked="Show"
             BackgroundColor="Blue"
             TextColor="White"
             />
